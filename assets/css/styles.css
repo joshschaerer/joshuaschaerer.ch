@@ -1,0 +1,190 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+    --header-height: 3.5rem;
+
+    /*========== Colors ==========*/
+    /*Color mode HSL(hue, saturation, lightness)*/
+    --first-hue: ;
+
+    --first-color: ;
+    --first-color-alt: ;
+    --title-color: ;
+    --text-color: ;
+    --text-color-light: ;
+    --body-color: ;
+    --container-color: ;
+
+    /*========== Font & Typography ==========*/
+    /*.5rem = 8px | 1rem = 16px ...*/
+    --body-font: 'Poppins', sans-serif;
+
+    --biggest-font-size: 1.75rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+    --tiny-font-size: .625rem;
+
+    /*========== Font weight ==========*/
+    --font-medium: 500;
+    --font-semibold: 600;
+
+    /*========== Margins ==========*/
+    /*.5rem = 8px | 1rem = 16px ...*/
+    --m-0-25: .25rem;
+    --m-0-5: .5rem;
+    --m-1: 1rem;
+    --m-1-5: 1.5rem;
+    --m-2: 2rem;
+    --m-2-5: 2.5rem;
+
+    /*========== Z-Index ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+    --z-modal: 1000;
+}
+
+/*========== Responsive ==========*/
+@media screen and (min-width: 968px) {
+    :root {
+        --biggest-font-size: 4rem;
+        --h1-font-size: 2.25rem;
+        --h2-font-size: 1.5rem;
+        --h3-font-size: 1.25rem;
+        --normal-font-size: 1rem;
+        --small-font-size: .875rem;
+        --smaller-font-size: .813rem;
+    }
+}
+
+/*=============== BASE ===============*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body,
+button,
+input,
+textarea {
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+}
+
+body {
+    margin: var(--header-height) 0 0 0;
+    background-color: var(--body-color);
+    color: var(--text-color);
+    transition: .4s;
+}
+
+h1, h2, h3, h4 {
+    color: var(--title-color);
+    font-weight: var(--font-semi-bold);
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/*=============== THEME ===============*/
+/*========== Colors ==========*/
+body.dark-theme{
+    --first-color-dark: ;
+    --title-color: ;
+    --text-color: ;
+    --body-color: ;
+    --container-color: ;
+}
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.section {
+    padding: 4.5rem 0 var(--m-1);
+}
+
+.section__title,
+.section__title-center {
+    font-size: var(--h2-font-size);
+    margin-bottom: var(--m-2);
+}
+
+.section__subtitle,
+.section__subtitle-center {
+    display: block;
+    font-size: var(--smaller-font-size);
+    color: var(--text-color-light);
+}
+
+.section__title-center,
+.section__subtitle-center {
+    text-align: center;
+}
+
+.container {
+    max-width: 968px;
+    margin-left: var(--mb-1);
+    margin-right: var(--mb-1);
+}
+
+.grid {
+    display: grid;
+    gap: var(--m-1-5);
+}
+
+/*=============== HEADER ===============*/
+
+
+/*=============== MAIN ===============*/
+
+
+/*=============== FOOTER ===============*/
+
+
+/*=============== BREAKPOINTS ===============*/
+/*========== Tablet ==========*/
+@media screen and (min-width: 576px) {
+
+}
+
+@media screen and (min-width: 767px) {
+    body {
+        margin: 0;
+    }
+}
+
+/*========== Desktop ==========*/
+@media screen and (min-width: 992px) {
+    .container {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .section {
+        padding: 6.5rem 0 var(--m-1);
+    }
+}

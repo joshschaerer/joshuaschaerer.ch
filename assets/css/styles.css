@@ -7,15 +7,15 @@
 
     /*========== Colors ==========*/
     /*Color mode HSL(hue, saturation, lightness)*/
-    --first-hue: ;
+    --first-hue: 214;
 
-    --first-color: ;
-    --first-color-alt: ;
-    --title-color: ;
-    --text-color: ;
-    --text-color-light: ;
-    --body-color: ;
-    --container-color: ;
+    --first-color: hsl(var(--first-hue), 89%, 52%);
+    --first-color-alt: hsl(var(--first-hue), 89%, 48%);
+    --title-color: hsl(0, 0%, 2%);
+    --text-color: hsl(0, 0%, 2%);
+    --text-color-light: hsl(0, 0%, 38%);
+    --body-color: hsl(0, 0%, 100%);
+    --container-color: hsl(0, 0%, 100%);
 
     /*========== Font & Typography ==========*/
     /*.5rem = 8px | 1rem = 16px ...*/
@@ -115,11 +115,11 @@ img {
 /*=============== THEME ===============*/
 /*========== Colors ==========*/
 body.dark-theme{
-    --first-color-dark: ;
-    --title-color: ;
-    --text-color: ;
-    --body-color: ;
-    --container-color: ;
+    --title-color: hsl(223, 15%, 91%);
+    --text-color: hsl(223, 15%, 91%);
+    --text-color-light: hsl(218, 5%, 71%);
+    --body-color: hsl(210, 4%, 10%);
+    --container-color: hsl(210, 3%, 15%);
 }
 
 /*=============== REUSABLE CSS CLASSES ===============*/

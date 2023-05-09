@@ -1,190 +1,250 @@
 /*=============== GOOGLE FONTS ===============*/
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@300;400;500;600&display=swap");
 
 /*=============== VARIABLES CSS ===============*/
 :root {
-    --header-height: 3.5rem;
+  --header-height: 3.5rem;
 
-    /*========== Colors ==========*/
-    /*Color mode HSL(hue, saturation, lightness)*/
-    --first-hue: 214;
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --color-white: 0, 0%, 100%;
+  --color-black: 0, 0%, 2%;
+  --color-red: 350, 88%, 61%;
+  --color-orange: 13, 96%, 64%;
+  --color-yellow: 42, 93%, 56%;
+  --color-green: 135, 48%, 51%;
+  --color-blue: 214, 89%, 52%;
+  --color-purple: 248, 99%, 73%;
 
-    --first-color: hsl(var(--first-hue), 89%, 52%);
-    --first-color-alt: hsl(var(--first-hue), 89%, 48%);
-    --title-color: hsl(0, 0%, 2%);
-    --text-color: hsl(0, 0%, 2%);
-    --text-color-light: hsl(0, 0%, 38%);
-    --body-color: hsl(0, 0%, 100%);
-    --container-color: hsl(0, 0%, 100%);
+  --color-body: hsl(var(--color-white));
+  --color-container: hsl(var(--color-black), 0.05);
 
-    /*========== Font & Typography ==========*/
-    /*.5rem = 8px | 1rem = 16px ...*/
-    --body-font: 'Poppins', sans-serif;
+  --color-title: hsl(var(--color-black), 0.6);
+  --color-text: hsl(var(--color-black));
+  --color-text-light: hsl(var(--color-black), 0.2);
+  --color-hover: rgba(255, 255, 255, 0.1);
 
-    --biggest-font-size: 1.75rem;
-    --h1-font-size: 1.5rem;
-    --h2-font-size: 1.25rem;
-    --h3-font-size: 1rem;
-    --normal-font-size: .938rem;
-    --small-font-size: .813rem;
-    --smaller-font-size: .75rem;
-    --tiny-font-size: .625rem;
+  /*========== Font & Typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --font-family: "Poppins", sans-serif;
+  --font-family-title: "Baloo 2", cursive;
 
-    /*========== Font weight ==========*/
-    --font-medium: 500;
-    --font-semibold: 600;
+  --font-size-huge: clamp(2.5rem, 0.642rem + 9.285vw, 9rem);
+  --font-size-big: clamp(1.75rem, 1.107rem + 3.214vw, 4rem);
+  --font-size-subheading: clamp(1rem, 0.571rem + 2.143vw, 2.5rem);
+  --font-size-h1: clamp(1.5rem, 1.286rem + 1.071vw, 2.25rem);
+  --font-size-h2: clamp(1.25rem, 1.179rem + 0.357vw, 1.5rem);
+  --font-size-h3: clamp(1rem, 0.929rem + 0.357vw, 1.25rem);
+  --font-size-normal: clamp(0.938rem, 0.92rem + 0.089vw, 1rem);
+  --font-size-small: clamp(0.813rem, 0.795rem + 0.089vw, 0.875rem);
+  --font-size-smaller: clamp(0.75rem, 0.732rem + 0.09vw, 0.813rem);
+  --font-size-tiny: 0.625rem;
 
-    /*========== Margins ==========*/
-    /*.5rem = 8px | 1rem = 16px ...*/
-    --m-0-25: .25rem;
-    --m-0-5: .5rem;
-    --m-1: 1rem;
-    --m-1-5: 1.5rem;
-    --m-2: 2rem;
-    --m-2-5: 2.5rem;
+  /*========== Font weight ==========*/
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
 
-    /*========== Z-Index ==========*/
-    --z-tooltip: 10;
-    --z-fixed: 100;
-    --z-modal: 1000;
+  /*========== Margins ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --margin-huge: clamp(2.5rem, 0.642rem + 9.285vw, 9rem);
+  --margin-big: clamp(1.75rem, 1.107rem + 3.214vw, 4rem);
+  --margin-normal: clamp(1rem, 0.929rem + 0.357vw, 1.25rem);
+  --margin-small: clamp(0.5rem, 0.357rem + 0.714vw, 1rem);
+  --margin-tiny: clamp(0.25rem, 0.179rem + 0.357vw, 0.5rem);
+
+  /*========== Transitions ==========*/
+  --transition-cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
+
+  /*========== Z-Index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
 }
 
-/*========== Responsive ==========*/
-@media screen and (min-width: 968px) {
-    :root {
-        --biggest-font-size: 4rem;
-        --h1-font-size: 2.25rem;
-        --h2-font-size: 1.5rem;
-        --h3-font-size: 1.25rem;
-        --normal-font-size: 1rem;
-        --small-font-size: .875rem;
-        --smaller-font-size: .813rem;
-    }
+/*=============== THEME ===============*/
+/*========== Colors ==========*/
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-body: hsl(210, 4%, 10%);
+    --color-container: hsl(210, 3%, 15%);
+    --color-title: hsl(var(--color-white), 0.6);
+    --color-text: hsl(var(--color-white));
+    --color-text-light: hsl(var(--color-white), 0.2);
+  }
 }
 
 /*=============== BASE ===============*/
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body,
 button,
 input,
 textarea {
-    font-family: var(--body-font);
-    font-size: var(--normal-font-size);
+  font-family: var(--font-family);
+  font-size: var(--font-size-normal);
 }
 
 body {
-    margin: var(--header-height) 0 0 0;
-    background-color: var(--body-color);
-    color: var(--text-color);
-    transition: .4s;
+  background-color: var(--color-body);
+  color: var(--color-text);
+  margin-top: var(--header-height);
 }
 
-h1, h2, h3, h4 {
-    color: var(--title-color);
-    font-weight: var(--font-semi-bold);
+h1,
+h2,
+h3,
+h4 {
+  color: var(--color-title);
+  font-family: var(--font-family-title);
+  font-weight: var(--font-medium);
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+}
+
+h3 {
+  font-size: var(--font-size-h3);
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 button {
-    cursor: pointer;
-    border: none;
-    outline: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }
 
 img {
-    max-width: 100%;
-    height: auto;
-}
-
-/*=============== THEME ===============*/
-/*========== Colors ==========*/
-body.dark-theme{
-    --title-color: hsl(223, 15%, 91%);
-    --text-color: hsl(223, 15%, 91%);
-    --text-color-light: hsl(218, 5%, 71%);
-    --body-color: hsl(210, 4%, 10%);
-    --container-color: hsl(210, 3%, 15%);
+  height: auto;
+  max-width: 100%;
 }
 
 /*=============== REUSABLE CSS CLASSES ===============*/
 .section {
-    padding: 4.5rem 0 var(--m-1);
-}
-
-.section__title,
-.section__title-center {
-    font-size: var(--h2-font-size);
-    margin-bottom: var(--m-2);
-}
-
-.section__subtitle,
-.section__subtitle-center {
-    display: block;
-    font-size: var(--smaller-font-size);
-    color: var(--text-color-light);
-}
-
-.section__title-center,
-.section__subtitle-center {
-    text-align: center;
+  padding-block: var(--margin-huge);
 }
 
 .container {
-    max-width: 968px;
-    margin-left: var(--mb-1);
-    margin-right: var(--mb-1);
+  margin-inline: auto;
+  max-width: 1440px;
+  padding-inline: var(--margin-normal);
 }
 
-.grid {
-    display: grid;
-    gap: var(--m-1-5);
+/*=============== LINKS & BUTTONS ===============*/
+.link {
+  color: var(--color-text-light);
+  cursor: pointer;
+  transition: all 0.3s var(--transition-cubic-bezier);
+}
+
+.link:is(.link--active, :hover, :focus-visible) {
+  color: var(--color-text);
+}
+
+@media (prefers-color-scheme: light) {
+  .link--outline {
+    color: var(--color-body);
+    text-shadow: -1px 0 0 var(--color-text), 0 -1px 0 var(--color-text),
+      0 1px 0 var(--color-text), 1px 0 0 var(--color-text);
+  }
+}
+
+/*=============== ICONS ===============*/
+.icon img {
+  display: block;
+  height: 100%;
+  width: 1.25em;
 }
 
 /*=============== HEADER ===============*/
 
-
 /*=============== MAIN ===============*/
+/*========== Intro ==========*/
+.intro {
+  display: flex;
+  flex-direction: column;
+  height: calc(100dvh - var(--header-height));
+  justify-content: flex-end;
+}
 
+.intro__subheading {
+  color: var(--color-text);
+  display: flex;
+  font-family: var(--font-family-title);
+  font-size: var(--font-size-subheading);
+  font-weight: var(--font-weight-light);
+  margin-bottom: var(--margin-normal);
+}
+
+.intro__heading {
+  font-size: var(--font-size-huge);
+  font-weight: var(--font-weight-semibold);
+  line-height: 1;
+  margin-bottom: var(--margin-small);
+  text-transform: uppercase;
+}
+
+.intro__heading:not(:first-of-type) a::before {
+  content: "&\20";
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .intro__subheading {
+    overflow: hidden;
+  }
+
+  .intro__subheading > span {
+    --transform: translateY(4rem);
+    animation: appear 1.9s var(--transition-cubic-bezier) forwards;
+    opacity: 0;
+  }
+
+  .intro__heading {
+    animation: appear 1.3s var(--transition-cubic-bezier) forwards;
+    animation-delay: 600ms;
+    opacity: 0;
+  }
+
+  .intro__heading:nth-of-type(1) {
+    --transform: translateX(9rem);
+  }
+
+  .intro__heading:nth-of-type(2) {
+    --transform: translateX(-6rem);
+  }
+
+  @keyframes appear {
+    0% {
+      opacity: 0;
+      transform: var(--transform);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(0);
+    }
+  }
+}
 
 /*=============== FOOTER ===============*/
-
-
-/*=============== BREAKPOINTS ===============*/
-/*========== Tablet ==========*/
-@media screen and (min-width: 576px) {
-
-}
-
-@media screen and (min-width: 767px) {
-    body {
-        margin: 0;
-    }
-}
-
-/*========== Desktop ==========*/
-@media screen and (min-width: 992px) {
-    .container {
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .section {
-        padding: 6.5rem 0 var(--m-1);
-    }
-}

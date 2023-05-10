@@ -222,7 +222,7 @@ img {
 @media (prefers-reduced-motion: no-preference) {
   .header {
     --transform: translateY(-4rem);
-    animation: appear 1.3s var(--transition-cubic-bezier) forwards;
+    animation: fadeIn 1.3s var(--transition-cubic-bezier) forwards;
     animation-delay: 900ms;
     opacity: 0;
   }
@@ -265,14 +265,25 @@ img {
 
   .intro__subheading > span {
     --transform: translateY(4rem);
-    animation: appear 1.9s var(--transition-cubic-bezier) forwards;
+    animation: fadeIn 1.9s var(--transition-cubic-bezier) forwards;
     opacity: 0;
   }
 
+  .unload-animation .intro__subheading > span {
+    animation: fadeOut 0.9s var(--transition-cubic-bezier) forwards;
+    opacity: 1;
+  }
+
   .intro__heading {
-    animation: appear 1.3s var(--transition-cubic-bezier) forwards;
+    animation: fadeIn 1.3s var(--transition-cubic-bezier) forwards;
     animation-delay: 600ms;
     opacity: 0;
+  }
+
+  .unload-animation .intro__heading {
+    animation: fadeOut 0.6s var(--transition-cubic-bezier) forwards;
+    animation-delay: 300ms;
+    opacity: 1;
   }
 
   .intro__heading:nth-of-type(1) {
@@ -282,17 +293,29 @@ img {
   .intro__heading:nth-of-type(2) {
     --transform: translateX(-6rem);
   }
-
-  @keyframes appear {
-    0% {
-      opacity: 0;
-      transform: var(--transform);
-    }
-    100% {
-      opacity: 1;
-      transform: translate(0);
-    }
-  }
 }
 
 /*=============== FOOTER ===============*/
+
+/*=============== ANIMATIONS ===============*/
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: var(--transform);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    transform: translate(0);
+  }
+  100% {
+    opacity: 0;
+    transform: var(--transform);
+  }
+}

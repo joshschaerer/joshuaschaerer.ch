@@ -157,7 +157,8 @@ img {
 .link {
   color: var(--color-text-light);
   cursor: pointer;
-  transition: all 0.3s var(--transition-cubic-bezier);
+  transition: color 0.3s var(--transition-cubic-bezier),
+    background-color 0.3s var(--transition-cubic-bezier);
 }
 
 .link:is(.link--active, :hover, :focus-visible) {
@@ -220,7 +221,7 @@ img {
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .header {
+  .header--animated {
     --transform: translateY(-4rem);
     animation: fadeIn 1.3s var(--transition-cubic-bezier) forwards;
     animation-delay: 900ms;

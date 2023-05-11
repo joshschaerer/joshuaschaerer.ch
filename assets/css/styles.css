@@ -22,7 +22,7 @@
 
   --color-title: hsl(var(--color-black), 0.6);
   --color-text: hsl(var(--color-black), 0.8);
-  --color-text-light: hsl(var(--color-black), 0.2);
+  --color-text-light: hsl(var(--color-black), 0.4);
   --color-hover: hsl(var(--color-black), 0.05);
 
   /*========== Font & Typography ==========*/
@@ -153,6 +153,25 @@ img {
   padding-inline: var(--margin-normal);
 }
 
+.list {
+  --gap: var(--margin-tiny);
+  display: flex;
+  gap: var(--gap);
+}
+
+.list--vertical {
+  flex-direction: column;
+}
+
+.list__heading {
+  color: var(--color-title);
+  font-family: var(--font-family-title);
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--margin-tiny);
+  text-transform: uppercase;
+}
+
 /*=============== LINKS & BUTTONS ===============*/
 .link {
   color: var(--color-text-light);
@@ -174,6 +193,10 @@ img {
 
 .link--button:is(.link--active, :hover, :focus-visible) {
   background-color: var(--color-hover);
+}
+
+.link--icon i {
+  margin-right: var(--margin-tiny);
 }
 
 @media (prefers-color-scheme: light) {
@@ -207,11 +230,6 @@ img {
   display: flex;
   height: var(--header-height);
   justify-content: space-between;
-}
-
-.nav__list {
-  display: flex;
-  gap: var(--margin-tiny);
 }
 
 .nav__logo,
@@ -297,6 +315,87 @@ img {
 }
 
 /*=============== FOOTER ===============*/
+.footer__nav {
+  display: grid;
+  gap: var(--margin-normal);
+  grid-template-areas:
+    "logo logo"
+    "design dev"
+    "about about"
+    "socials contact";
+  padding-block: var(--margin-huge) var(--margin-big);
+}
+
+.footer__menu-logo {
+  grid-area: logo;
+}
+
+.footer__logo {
+  font-family: var(--font-family-title);
+  font-size: var(--font-size-h1);
+}
+
+.footer__paragraph {
+  color: var(--color-title);
+  font-size: var(--font-size-smaller);
+  max-width: 50ch;
+}
+
+.footer__menu-design {
+  grid-area: design;
+}
+
+.footer__menu-dev {
+  grid-area: dev;
+}
+
+.footer__menu-about {
+  grid-area: about;
+}
+
+.footer__menu-socials {
+  grid-area: socials;
+}
+
+.footer__menu-contact {
+  grid-area: contact;
+}
+
+.footer__bottom {
+  align-items: center;
+  border-top: 1px solid var(--color-hover);
+  display: flex;
+  flex-direction: column;
+  gap: var(--margin-tiny);
+  justify-content: space-between;
+  padding-block: var(--margin-small);
+}
+
+.footer__copy {
+  color: var(--color-title);
+  font-size: var(--font-size-smaller);
+}
+
+@media (min-width: 767px) {
+  .footer__nav {
+    grid-template-areas:
+      "logo logo logo"
+      "design dev about"
+      "socials contact contact";
+  }
+
+  .footer__bottom {
+    flex-direction: row-reverse;
+  }
+}
+
+@media (min-width: 1023px) {
+  .footer__nav {
+    grid-template-areas:
+      "logo design dev about socials"
+      "logo design dev about contact";
+  }
+}
 
 /*=============== ANIMATIONS ===============*/
 @keyframes fadeIn {

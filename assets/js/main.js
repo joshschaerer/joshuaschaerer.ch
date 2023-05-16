@@ -68,3 +68,29 @@ if (intro && !prefersReducedMotion) {
     });
   });
 }
+
+/*=============== ANIMATIONS ===============*/
+// Validate whether the motion preference is not reduced
+if (!prefersReducedMotion) {
+  // Access all elements to be animated on scroll
+  const animations = document.querySelectorAll(".scroll-animation");
+  // Create an observer to listen for intersections
+  const observer = new IntersectionObserver(
+    (entries) => {
+      // Loop through all entries
+      entries.forEach((entry) => {
+        // Validate whether the entry is intersecting
+        if (entry.isIntersecting) {
+          // Add the animation class
+          entry.target.classList.add("animation--active");
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
+  // Loop through all elements to be animated on scroll
+  animations.forEach((animation) => {
+    // Observe the element
+    observer.observe(animation);
+  });
+}

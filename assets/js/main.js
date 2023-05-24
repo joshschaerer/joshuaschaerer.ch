@@ -69,6 +69,40 @@ if (intro && !prefersReducedMotion) {
   });
 }
 
+/*=============== SECTIONS ===============*/
+// Access all section headers
+const sHeaders = document.querySelectorAll(".section__header");
+
+/*===== NAV SCROLL INDICATOR =====*/
+// Validate whether a section navigation exists
+// and the motion preference is not reduced
+sHeaders.forEach((header) => {
+  const sNav = header.querySelector(".section__nav");
+  if (sNav && !prefersReducedMotion) {
+    // Access the section navigation links
+    // and their respective contents
+    const sLinks = sNav.querySelectorAll(".section__link");
+    sLinks.forEach((link) => {
+      const sContent = header.nextElementSibling.querySelector(
+        `#${link.href.split("#")[1]}`
+      );
+      // Listen for scroll event
+      window.addEventListener("scroll", () => {
+        // Calculate the scroll progress
+        const pTop = window.pageYOffset || document.documentElement.scrollTop;
+        const sTop = sContent.offsetTop - 160;
+        const sHeight = sContent.offsetHeight;
+        const progress = (pTop - sTop) / sHeight;
+        // Check whether the scroll progress is within the section
+        // and update the progress of the scroll indicator
+        if (progress >= -0.5 && progress <= 1.5) {
+          link.style.setProperty("--nav-progress", `${progress}`);
+        }
+      });
+    });
+  }
+});
+
 /*=============== ANIMATIONS ===============*/
 // Validate whether the motion preference is not reduced
 if (!prefersReducedMotion) {

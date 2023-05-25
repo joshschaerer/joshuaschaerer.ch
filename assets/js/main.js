@@ -107,7 +107,7 @@ sHeaders.forEach((header) => {
 // Validate whether the motion preference is not reduced
 if (!prefersReducedMotion) {
   // Access all elements to be animated on scroll
-  const animations = document.querySelectorAll(".scroll-animation");
+  const animations = document.querySelectorAll(`[data-animation="scroll"]`);
   // Create an observer to listen for intersections
   const observer = new IntersectionObserver(
     (entries) => {

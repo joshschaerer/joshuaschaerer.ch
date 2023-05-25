@@ -827,7 +827,7 @@ img {
 
 /*=============== ANIMATIONS ===============*/
 @media (prefers-reduced-motion: no-preference) {
-  .scroll-animation {
+  [data-animation="scroll"] {
     opacity: 0;
   }
 
@@ -837,6 +837,32 @@ img {
 
   .animation--container {
     overflow: hidden;
+  }
+
+  [data-animation-delay="300"] {
+    animation-delay: 300ms;
+  }
+
+  [data-animation-delay="600"] {
+    animation-delay: 600ms;
+  }
+
+  [data-animation-delay="900"] {
+    animation-delay: 900ms;
+  }
+
+  @media (min-width: 1023px) {
+    [data-animation-delay="l-300"] {
+      animation-delay: 300ms;
+    }
+
+    [data-animation-delay="l-600"] {
+      animation-delay: 600ms;
+    }
+
+    [data-animation-delay="l-900"] {
+      animation-delay: 900ms;
+    }
   }
 }
 

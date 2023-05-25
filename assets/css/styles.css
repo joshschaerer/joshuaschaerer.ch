@@ -301,7 +301,7 @@ img {
 .card {
   --background-color: var(--color-container);
   --border-radius: 0.75rem;
-  background-color: var(--background-color);
+  background: var(--background, var(--background-color));
   border-radius: var(--border-radius);
   padding: var(--margin-big) var(--margin-normal);
 }
@@ -636,6 +636,51 @@ img {
   width: var(--font-size-h1);
 }
 
+.process .card {
+  padding-block: var(--margin-medium);
+}
+
+.process .list__item:nth-child(1) .card {
+  --background: linear-gradient(
+    90deg,
+    hsl(var(--color-blue), 0.1) 0%,
+    hsl(var(--color-blue), 0.25) 100%
+  );
+}
+
+.process .list__item:nth-child(2) .card {
+  --background: linear-gradient(
+    90deg,
+    hsl(var(--color-blue), 0.25) 0%,
+    hsl(var(--color-blue), 0.325) 100%
+  );
+}
+
+.process .list__item:nth-child(3) .card {
+  --background: linear-gradient(
+    90deg,
+    hsl(var(--color-blue), 0.325) 0%,
+    hsl(var(--color-purple), 0.325) 100%
+  );
+}
+
+.process .list__item:nth-child(4) .card {
+  --background: linear-gradient(
+    90deg,
+    hsl(var(--color-purple), 0.325) 0%,
+    hsl(var(--color-purple), 0.4) 100%
+  );
+}
+
+.process .item__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.process .item__heading {
+  text-transform: uppercase;
+}
+
 @media (min-width: 767px) {
   .tech {
     display: grid;
@@ -658,6 +703,42 @@ img {
 
   .tech .section__content {
     grid-area: content;
+  }
+}
+
+@media (min-width: 1023px) {
+  .process__menu .list {
+    grid-template-columns: 20% auto 20% 20% auto 20%;
+  }
+
+  .process__menu .list__item:nth-child(2) {
+    grid-column: span 2;
+  }
+
+  .process__menu .list__item:nth-child(3) {
+    grid-column: 3 / span 3;
+    grid-row: 2;
+  }
+
+  .process__menu .list__item:nth-child(4) {
+    grid-column: 5 / span 2;
+  }
+
+  .process__menu .list__item {
+    position: relative;
+  }
+
+  .process__menu .item__heading {
+    position: absolute;
+    transform: translateY(0.75rem);
+  }
+
+  .process__menu .item__heading + .item__heading {
+    right: 0;
+  }
+
+  .process__menu .list__item:nth-child(4) .item__heading {
+    right: 0;
   }
 }
 

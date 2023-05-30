@@ -190,7 +190,7 @@ img {
   padding-inline: unset;
 }
 
-@media (min-width: 767px) {
+@media (min-width: 768px) {
   .section__header {
     align-items: flex-start;
     display: grid;
@@ -217,8 +217,8 @@ img {
   }
 
   .section__nav {
-    grid-area: nav;
     display: unset;
+    grid-area: nav;
     margin-top: var(--margin-normal);
   }
 
@@ -231,19 +231,19 @@ img {
   }
 
   .section__link::before {
-    content: "";
-    position: absolute;
-    inset: 0;
     border-bottom: 1px solid var(--color-text-light);
+    content: "";
     display: block;
+    inset: 0;
+    position: absolute;
   }
 
   .section__link::after {
-    content: "";
-    position: absolute;
-    inset: 0;
     border-bottom: 1px solid var(--color-text);
+    content: "";
     display: block;
+    inset: 0;
+    position: absolute;
     transform: scaleX(var(--nav-progress));
     transform-origin: 0% 50%;
   }
@@ -360,7 +360,7 @@ img {
   padding-block: var(--margin-normal);
 }
 
-@media (min-width: 767px) {
+@media (min-width: 768px) {
   .card__header {
     align-items: flex-start;
     grid-template-areas:
@@ -439,7 +439,7 @@ img {
   padding-top: var(--margin-small);
 }
 
-@media (min-width: 1023px) {
+@media (min-width: 1024px) {
   .list--card {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -681,7 +681,37 @@ img {
   text-transform: uppercase;
 }
 
-@media (min-width: 767px) {
+.reason__menu .list {
+  grid-template-columns: auto;
+}
+
+.reason__card .card__header {
+  grid-template-areas:
+    "icon label"
+    "heading heading"
+    "paragraph paragraph";
+  grid-template-columns: repeat(2, auto);
+  margin-bottom: unset;
+}
+
+.reason__card .card__label {
+  justify-self: flex-end;
+}
+
+.reason__card .card__heading {
+  margin-top: var(--margin-medium);
+}
+
+.reason__card .card__icon {
+  justify-self: unset;
+}
+
+.reason__card .card__paragraph {
+  border-top: 1px solid var(--color-text);
+  padding-top: var(--margin-normal);
+}
+
+@media (min-width: 768px) {
   .tech {
     display: grid;
     gap: var(--margin-big);
@@ -706,7 +736,31 @@ img {
   }
 }
 
-@media (min-width: 1023px) {
+@media (min-width: 768px) and (max-width: 1023px) {
+  .reason__card .card__header {
+    grid-template-areas: "icon heading paragraph";
+    grid-template-columns: min-content 1fr 2fr;
+  }
+
+  .reason__card .card__icon {
+    margin-right: var(--margin-normal);
+  }
+
+  .reason__card .card__heading {
+    margin-top: unset;
+  }
+
+  .reason__card .card__label {
+    display: none;
+  }
+
+  .reason__card .card__paragraph {
+    border-top: unset;
+    padding-top: unset;
+  }
+}
+
+@media (min-width: 1024px) {
   .process__menu .list {
     grid-template-columns: 20% auto 20% 20% auto 20%;
   }
@@ -739,6 +793,53 @@ img {
 
   .process__menu .list__item:nth-child(4) .item__heading {
     right: 0;
+  }
+
+  .reason__menu .list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .reason__menu .list__item:nth-child(1),
+  .reason__menu .list__item:nth-child(2) {
+    margin-bottom: var(--margin-big);
+  }
+
+  .reason__menu .list__item:nth-child(3),
+  .reason__menu .list__item:nth-child(4) {
+    margin-top: var(--margin-big);
+  }
+
+  .reason__card {
+    height: 100%;
+    min-height: 24rem;
+  }
+
+  .reason__card .card__header {
+    grid-template-rows: auto auto 0fr;
+    height: 100%;
+    transition: grid-template-rows 0.6s var(--transition-cubic-bezier);
+  }
+
+  .reason__card:is(:hover, :focus-visible) .card__header {
+    grid-template-rows: auto auto 1fr;
+  }
+
+  .reason__card .card__heading {
+    align-self: flex-end;
+    margin-top: unset;
+  }
+
+  .reason__card .card__paragraph {
+    max-height: 0px;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.3s var(--transition-cubic-bezier),
+      opacity 0.6s var(--transition-cubic-bezier);
+  }
+
+  .reason__card:is(:hover, :focus-visible) .card__paragraph {
+    max-height: 100%;
+    opacity: 1;
   }
 }
 
@@ -804,7 +905,7 @@ img {
   font-size: var(--font-size-smaller);
 }
 
-@media (min-width: 767px) {
+@media (min-width: 768px) {
   .footer__nav {
     grid-template-areas:
       "logo logo logo"
@@ -817,7 +918,7 @@ img {
   }
 }
 
-@media (min-width: 1023px) {
+@media (min-width: 1024px) {
   .footer__nav {
     grid-template-areas:
       "logo design dev about socials"
@@ -851,7 +952,7 @@ img {
     animation-delay: 900ms;
   }
 
-  @media (min-width: 1023px) {
+  @media (min-width: 1024px) {
     [data-animation-delay="l-300"] {
       animation-delay: 300ms;
     }

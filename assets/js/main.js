@@ -103,6 +103,29 @@ sHeaders.forEach((header) => {
   }
 });
 
+/*===== BACKGROUND CARD TRANSFORM =====*/
+// Access all background cards
+const bCards = document.querySelectorAll(".card--background");
+
+// Validate whether background cards exist
+// and the motion preference is not reduced
+if (bCards.length > 0 && !prefersReducedMotion) {
+  // Listen for scroll event
+  window.addEventListener("scroll", () => {
+    // Calculate the scroll progress
+    const pTop = window.pageYOffset || document.documentElement.scrollTop;
+    const sTop =
+      window.pageYOffset + bCards[0].getBoundingClientRect().top - 160;
+    const sHeight = bCards[0].offsetHeight;
+    const progress = ((pTop - sTop) / sHeight) * 100;
+    // Check whether the scroll progress is within the section
+    // and update the progress of the scroll indicator
+    if (progress >= 0 && progress <= 100) {
+      bCards[1].style.setProperty("--card-progress", `-${progress}px`);
+    }
+  });
+}
+
 /*=============== ANIMATIONS ===============*/
 // Validate whether the motion preference is not reduced
 if (!prefersReducedMotion) {

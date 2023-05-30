@@ -307,7 +307,9 @@ img {
 }
 
 .card--background {
+  --card-progress: 0;
   padding-inline: unset;
+  position: relative;
 }
 
 .card__header {
@@ -375,6 +377,10 @@ img {
 }
 
 @media (prefers-reduced-motion: no-preference) {
+  .card--background {
+    margin-top: var(--card-progress);
+  }
+
   .card__list .card__link {
     padding-block: var(--margin-medium);
     position: relative;
@@ -599,11 +605,19 @@ img {
 
 /*========== About ==========*/
 .offers__card:nth-child(1) {
-  --background-color: hsl(var(--color-blue), 0.1);
+  --background: linear-gradient(
+      hsl(var(--color-blue), 0.1),
+      hsl(var(--color-blue), 0.1)
+    ),
+    linear-gradient(var(--color-body), var(--color-body));
 }
 
 .offers__card:nth-child(2) {
-  --background-color: hsl(var(--color-blue), 0.175);
+  --background: linear-gradient(
+      hsl(var(--color-blue), 0.175),
+      hsl(var(--color-blue), 0.175)
+    ),
+    linear-gradient(var(--color-body), var(--color-body));
 }
 
 .tech .section__content {

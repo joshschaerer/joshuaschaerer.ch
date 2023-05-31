@@ -1,0 +1,11 @@
+/*=============== Portfolio ===============*/
+.portfolio__menu .list--card {
+  --gap: var(--margin-medium);
+  grid-template-columns: auto;
+}
+
+@media (min-width: 768px) {
+  .portfolio__menu .list--card {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

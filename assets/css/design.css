@@ -1,0 +1,65 @@
+/*=============== DESIGN ===============*/
+.offers__menu .list {
+  grid-template-columns: auto;
+}
+
+.offers__card {
+  height: 100%;
+}
+
+.offers .card__header {
+  grid-template-areas:
+    "heading"
+    "paragraph";
+  grid-template-columns: auto;
+  margin-bottom: unset;
+}
+
+.offers .card__header:has(> .card__icon) {
+  grid-template-areas:
+    "heading"
+    "paragraph"
+    "icon";
+}
+
+.offers .card__icon {
+  align-self: center;
+  display: none;
+  font-size: var(--font-size-big);
+  justify-self: center;
+}
+
+.offers .card__icon i {
+  aspect-ratio: 1/1;
+  border: 2px solid var(--color-text-light);
+  border-radius: 50%;
+  padding: var(--margin-normal);
+}
+
+@media (min-width: 768px) {
+  .offers__menu .list {
+    gap: var(--margin-normal);
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .offers__menu .list li:nth-of-type(1),
+  .offers__menu .list li:nth-of-type(4) {
+    grid-column: span 2;
+  }
+
+  .offers__menu .list li:nth-of-type(2),
+  .offers__menu .list li:nth-of-type(3) {
+    grid-column: span 3;
+  }
+
+  .offers .card__header:has(> .card__icon) {
+    grid-template-areas:
+      "heading heading icon"
+      "paragraph paragraph icon";
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .offers .card__icon {
+    display: unset;
+  }
+}

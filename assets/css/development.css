@@ -36,6 +36,20 @@
   padding: var(--margin-normal);
 }
 
+.services__menu li {
+  display: grid;
+  gap: var(--margin-normal);
+  grid-template-areas:
+    "icon"
+    "header";
+  grid-template-columns: auto;
+  width: 100%;
+}
+
+.services__menu .item__icon {
+  margin-block: var(--margin-huge);
+}
+
 @media (min-width: 768px) {
   .expertise__menu .list {
     gap: var(--margin-normal);
@@ -61,5 +75,29 @@
 
   .expertise .card__icon {
     display: unset;
+  }
+
+  .services__menu ul {
+    gap: var(--margin-big);
+  }
+
+  .services__menu li {
+    align-items: center;
+    grid-template-areas: "header icon";
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+  }
+
+  .services__menu li:nth-of-type(2n) {
+    grid-template-areas: "icon header";
+  }
+
+  .services__menu .item__paragraph {
+    font-size: var(--font-size-h3);
+    line-height: 1.8;
+  }
+
+  .services__menu .item__icon {
+    margin-block: unset;
   }
 }

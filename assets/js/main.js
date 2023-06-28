@@ -33,7 +33,7 @@ if (header && !prefersReducedMotion) {
 
 /*=============== INTRO ===============*/
 // Access the intro section
-const intro = document.getElementById("intro");
+const intro = document.getElementById("intro-link");
 
 /*===== TOGGLE LINK =====*/
 // Validate whether the intro section exists

@@ -24,6 +24,7 @@
   --color-text: hsl(var(--color-black), 0.8);
   --color-text-light: hsl(var(--color-black), 0.4);
   --color-hover: hsl(var(--color-black), 0.05);
+  --color-hover-light: hsl(var(--color-black), 0.1);
 
   /*========== Font & Typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
@@ -75,6 +76,7 @@
     --color-text: hsl(var(--color-white), 0.8);
     --color-text-light: hsl(var(--color-white), 0.2);
     --color-hover: hsl(var(--color-white), 0.05);
+    --color-hover-light: hsl(var(--color-white), 0.1);
   }
 }
 
@@ -634,6 +636,20 @@ img {
 
 .link--icon i:nth-of-type(2) {
   margin-left: auto;
+}
+
+button {
+  background-color: var(--color-hover);
+  border-radius: 0.25rem;
+  color: var(--color-text);
+  cursor: pointer;
+  display: inline-block;
+  padding: var(--margin-tiny) var(--margin-small);
+  transition: background-color 0.3s var(--transition-cubic-bezier);
+}
+
+button:is(.button--active, :hover, :focus-visible) {
+  background-color: var(--color-hover-light);
 }
 
 @media (prefers-color-scheme: light) {

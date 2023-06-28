@@ -1,1 +1,268 @@
 /*=============== CONTACT ===============*/
+.intro {
+  height: unset;
+  padding-bottom: unset;
+}
+
+.section__content {
+  display: grid;
+  gap: var(--margin-big);
+}
+
+.contact__menu .list {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.contact__menu li + li:not(:nth-of-type(2)) {
+  border-left: 1px solid var(--color-text-light);
+}
+
+.list__item:not(:first-of-type) .contact__card {
+  background: unset;
+}
+
+.contact__card {
+  padding-block: var(--margin-normal);
+}
+
+.contact__card .card__header {
+  gap: var(--margin-tiny);
+  grid-template-areas:
+    "icon"
+    "heading";
+  grid-template-columns: 1fr;
+  justify-content: center;
+  margin-bottom: unset;
+}
+
+.contact__card .card__heading {
+  align-self: flex-end;
+  display: flex;
+  justify-self: center;
+}
+
+.contact__card .card__icon {
+  font-size: var(--font-size-big);
+  justify-self: center;
+  margin-bottom: var(--margin-small);
+}
+
+@media (min-width: 768px) {
+  .contact__card .card__header {
+    grid-template-areas: "icon heading";
+    grid-template-columns: min-content auto;
+  }
+
+  .contact__card .card__icon {
+    margin-bottom: unset;
+    margin-right: var(--margin-medium);
+  }
+
+  .contact__card .card__heading {
+    align-self: center;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .contact__menu .list__item:first-child {
+    animation: fadeIn 1.3s var(--transition-cubic-bezier) forwards;
+    animation-delay: 1000ms;
+    opacity: 0;
+  }
+
+  .contact__menu .list__item:last-child {
+    animation: fadeIn 1.3s var(--transition-cubic-bezier) forwards;
+    animation-delay: 1600ms;
+    opacity: 0;
+  }
+
+  .contact__card .card__heading {
+    overflow: hidden;
+  }
+
+  .contact__card .card__heading > span {
+    --transform: translateY(4rem);
+    animation: fadeIn 1.3s var(--transition-cubic-bezier) forwards;
+    opacity: 0;
+  }
+
+  .contact__menu li:nth-of-type(1) .card__heading > span {
+    animation-delay: 1300ms;
+  }
+
+  .contact__menu li:nth-of-type(2) .card__heading > span {
+    animation-delay: 1600ms;
+  }
+
+  .contact__menu li:nth-of-type(3) .card__heading > span {
+    animation-delay: 1900ms;
+  }
+
+  .contact__card .card__icon {
+    animation: fadeIn 1.3s var(--transition-cubic-bezier) forwards;
+    opacity: 0;
+  }
+
+  .contact__menu li:nth-of-type(1) .card__icon {
+    animation-delay: 1300ms;
+  }
+
+  .contact__menu li:nth-of-type(2) .card__icon {
+    animation-delay: 1600ms;
+  }
+
+  .contact__menu li:nth-of-type(3) .card__icon {
+    animation-delay: 1900ms;
+  }
+}
+
+/*========== Form ==========*/
+.form {
+  --color-invalid: hsl(var(--color-red), 1);
+}
+
+fieldset[class$="__form-div"] {
+  align-items: flex-start;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--margin-small);
+}
+
+legend[class$="__form-legend"] {
+  height: 0;
+  visibility: hidden;
+}
+
+div[class$="__form-group"] {
+  align-items: flex-start;
+  display: grid;
+  grid-template-rows: auto 0fr;
+  transition: grid-template-rows 0.6s var(--transition-cubic-bezier);
+  width: 100%;
+}
+
+div[class$="__form-group"]:has(
+    input[class$="__form-input"]:not(:focus-visible):not(
+        :placeholder-shown
+      ):invalid
+  ) {
+  grid-template-rows: auto 1fr;
+}
+
+label[class$="__form-textfield"],
+label[class$="__form-textarea"] {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: var(--margin-tiny);
+}
+
+input[class$="__form-input"],
+textarea[class$="__form-input"] {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid var(--color-text-light);
+  color: var(--color-text);
+  padding-block: 0.5rem;
+  transition: border-bottom 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  width: 100%;
+}
+
+textarea[class$="__form-input"] {
+  height: 6rem;
+  resize: none;
+}
+
+span[class$="__form-label"] {
+  color: var(--color-text-light);
+  cursor: text;
+  font-size: var(--font-size-smaller);
+  height: var(--font-size-normal);
+  transition: color 0.3s var(--transition-cubic-bezier),
+    font-size 0.3s var(--transition-cubic-bezier),
+    transform 0.3s var(--transition-cubic-bezier);
+}
+
+input[class$="__form-input"]:not(:focus-visible):placeholder-shown
+  + span[class$="__form-label"],
+textarea[class$="__form-input"]:not(:focus-visible):placeholder-shown
+  + span[class$="__form-label"] {
+  color: var(--color-text);
+  font-size: var(--font-size-normal);
+  transform: translateY(2rem);
+}
+
+input[class$="__form-input"]:not(:focus-visible):not(
+    :placeholder-shown
+  ):invalid {
+  border-color: var(--color-invalid);
+}
+
+span[class$="__form-error-message"] {
+  color: var(--color-invalid);
+  font-size: var(--font-size-smaller);
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  padding-top: var(--margin-tiny);
+  transition: max-height 0.3s var(--transition-cubic-bezier),
+    opacity 0.6s var(--transition-cubic-bezier);
+}
+
+label[class$="__form-textfield"]:has(
+    input[class$="__form-input"]:not(:focus-visible):not(
+        :placeholder-shown
+      ):invalid
+  )
+  + span[class$="__form-error-message"] {
+  max-height: 100%;
+  opacity: 1;
+}
+
+button[type="submit"] {
+  margin-top: var(--margin-small);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .contact__form-group:nth-of-type(1) {
+    --_animation-delay: 2300ms;
+  }
+
+  .contact__form-group:nth-of-type(2) {
+    --_animation-delay: 2600ms;
+  }
+
+  .contact__form-group:nth-of-type(3) {
+    --_animation-delay: 2900ms;
+  }
+
+  label {
+    overflow: hidden;
+  }
+
+  .contact__form-input {
+    --transform: translateX(-180rem);
+    animation: fadeIn 1.9s var(--transition-cubic-bezier) forwards;
+    animation-delay: var(--_animation-delay);
+    opacity: 0;
+  }
+
+  .contact__form-label {
+    line-height: 1;
+    overflow: hidden;
+  }
+
+  .contact__form-label > span {
+    --transform: translateY(9rem);
+    animation: fadeIn 1.3s var(--transition-cubic-bezier) forwards;
+    animation-delay: var(--_animation-delay);
+    display: block;
+    opacity: 0;
+  }
+
+  button[type="submit"] {
+    animation: fadeIn 1.3s var(--transition-cubic-bezier) forwards;
+    animation-delay: 3300ms;
+    opacity: 0;
+  }
+}

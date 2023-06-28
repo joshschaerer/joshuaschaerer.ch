@@ -91,7 +91,117 @@
     </header>
 
     <!--==================== MAIN ====================-->
-    <main class="main" id="main"></main>
+    <main class="main" id="main">
+      <div class="container">
+        <!--=============== INTRO ===============-->
+        <section class="intro section" id="intro">
+          <h1 class="intro__heading">Contact me</h1>
+        </section>
+
+        <!--=============== CONTACT ===============-->
+        <section class="contact section" id="contact">
+          <div class="section__content">
+            <div class="contact__menu">
+              <ul class="list list--card">
+                <li class="list__item">
+                  <div class="contact__card card">
+                    <a href="#" class="link">
+                      <div class="card__header">
+                        <h2 class="card__heading"><span>CV</span></h2>
+                        <div class="card__icon">
+                          <i class="fa-solid fa-circle-down"></i>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </li>
+
+                <li class="list__item">
+                  <div class="contact__card card">
+                    <a href="#" class="link">
+                      <div class="card__header">
+                        <h2 class="card__heading"><span>Email</span></h2>
+                        <div class="card__icon">
+                          <i class="fa-regular fa-envelope"></i>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </li>
+
+                <li class="list__item">
+                  <div class="contact__card card">
+                    <a href="#" class="link">
+                      <div class="card__header">
+                        <h2 class="card__heading"><span>Phone</span></h2>
+                        <div class="card__icon">
+                          <i class="fa-solid fa-phone"></i>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <form action="#" class="contact__form form">
+              <fieldset class="contact__form-div">
+                <legend class="contact__form-legend">Contact</legend>
+
+                <div class="contact__form-group">
+                  <label for="contact-name" class="contact__form-textfield">
+                    <input
+                      type="text"
+                      id="contact-name"
+                      class="contact__form-input"
+                      placeholder=" "
+                      pattern="[A-Za-z ]+"
+                      required />
+                    <span class="contact__form-label"><span>Name</span></span>
+                  </label>
+                  <span class="contact__form-error-message">
+                    The name must contain only letters.
+                  </span>
+                </div>
+
+                <div class="contact__form-group">
+                  <label for="contact-email" class="contact__form-textfield">
+                    <input
+                      type="email"
+                      id="contact-email"
+                      class="contact__form-input"
+                      placeholder=" "
+                      required />
+                    <span class="contact__form-label"><span>Email</span></span>
+                  </label>
+                  <span class="contact__form-error-message">
+                    The email is not formatted correctly.
+                  </span>
+                </div>
+
+                <div class="contact__form-group">
+                  <label for="contact-message" class="contact__form-textarea">
+                    <textarea
+                      name="contact-message"
+                      id="contact-message"
+                      cols="30"
+                      rows="10"
+                      class="contact__form-input"
+                      placeholder=" "
+                      required></textarea>
+                    <span class="contact__form-label">
+                      <span>Message</span>
+                    </span>
+                  </label>
+                </div>
+
+                <button type="submit">Send</button>
+              </fieldset>
+            </form>
+          </div>
+        </section>
+      </div>
+    </main>
 
     <!--==================== FOOTER ====================-->
     <footer class="footer" id="footer">

@@ -1,0 +1,103 @@
+/*=============== DEVELOPMENT ===============*/
+.expertise__menu .list {
+  grid-template-columns: auto;
+}
+
+.expertise__card {
+  height: 100%;
+}
+
+.expertise .card__header {
+  grid-template-areas:
+    "heading"
+    "paragraph";
+  grid-template-columns: auto;
+  margin-bottom: unset;
+}
+
+.expertise .card__header:has(> .card__icon) {
+  grid-template-areas:
+    "heading"
+    "paragraph"
+    "icon";
+}
+
+.expertise .card__icon {
+  align-self: center;
+  display: none;
+  font-size: var(--font-size-big);
+  justify-self: center;
+}
+
+.expertise .card__icon i {
+  aspect-ratio: 1/1;
+  border: 2px solid var(--color-text-light);
+  border-radius: 50%;
+  padding: var(--margin-normal);
+}
+
+.services__menu li {
+  display: grid;
+  gap: var(--margin-normal);
+  grid-template-areas:
+    "icon"
+    "header";
+  grid-template-columns: auto;
+  width: 100%;
+}
+
+.services__menu .item__icon {
+  margin-block: var(--margin-huge);
+}
+
+@media (min-width: 768px) {
+  .expertise__menu .list {
+    gap: var(--margin-normal);
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .expertise__menu .list li:nth-of-type(1),
+  .expertise__menu .list li:nth-of-type(4) {
+    grid-column: span 2;
+  }
+
+  .expertise__menu .list li:nth-of-type(2),
+  .expertise__menu .list li:nth-of-type(3) {
+    grid-column: span 3;
+  }
+
+  .expertise .card__header:has(> .card__icon) {
+    grid-template-areas:
+      "heading heading icon"
+      "paragraph paragraph icon";
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .expertise .card__icon {
+    display: unset;
+  }
+
+  .services__menu ul {
+    gap: var(--margin-big);
+  }
+
+  .services__menu li {
+    align-items: center;
+    grid-template-areas: "header icon";
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+  }
+
+  .services__menu li:nth-of-type(2n) {
+    grid-template-areas: "icon header";
+  }
+
+  .services__menu .item__paragraph {
+    font-size: var(--font-size-h3);
+    line-height: 1.8;
+  }
+
+  .services__menu .item__icon {
+    margin-block: unset;
+  }
+}

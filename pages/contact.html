@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--=============== FAVICON ===============-->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      media="(prefers-color-scheme: dark)"
+      href="../assets/img/favicon/favicon-dark-16x16.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      media="(prefers-color-scheme: dark)"
+      href="../assets/img/favicon/favicon-dark-32x32.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="48x48"
+      media="(prefers-color-scheme: dark)"
+      href="../assets/img/favicon/favicon-dark-48x48.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      media="(prefers-color-scheme: light)"
+      href="../assets/img/favicon/favicon-light-16x16.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      media="(prefers-color-scheme: light)"
+      href="../assets/img/favicon/favicon-light-32x32.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="48x48"
+      media="(prefers-color-scheme: light)"
+      href="../assets/img/favicon/favicon-light-48x48.png" />
+
+    <!--=============== FONTAWESOME ===============-->
+    <script
+      src="https://kit.fontawesome.com/adc85a53d0.js"
+      crossorigin="anonymous"
+      defer></script>
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link rel="stylesheet" href="../assets/css/contact.css" />
+
+    <!--=============== JS ===============-->
+    <script src="../assets/js/main.js" defer></script>
+
+    <!--=============== METADATA ===============-->
+    <title>Contact</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="Joshua Schärer" />
+    <meta name="copyright" content="Joshua Schärer" />
+    <meta name="color-scheme" content="dark light" />
+  </head>
+  <body>
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+      <nav class="nav container" id="primary-nav" aria-label="primary">
+        <a href="../index.html" class="nav__logo link link--button">js</a>
+
+        <div class="nav__menu">
+          <ul class="nav__list list">
+            <li class="list__item">
+              <a href="./portfolio.html" class="nav__link link link--button">
+                Portfolio
+              </a>
+            </li>
+            <li class="list__item">
+              <a href="./about.html" class="nav__link link link--button">
+                About
+              </a>
+            </li>
+            <li class="list__item">
+              <a href="#" class="nav__link link link--button">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!--==================== MAIN ====================-->
+    <main class="main" id="main">
+      <div class="container">
+        <!--=============== INTRO ===============-->
+        <section class="intro section" id="intro">
+          <h1 class="intro__heading">Contact me</h1>
+        </section>
+
+        <!--=============== CONTACT ===============-->
+        <section class="contact section" id="contact">
+          <div class="section__content">
+            <div class="contact__menu">
+              <ul class="list list--card">
+                <li class="list__item">
+                  <div class="contact__card card">
+                    <a
+                      target="_blank"
+                      href="../assets/pdf/Job-Application_compressed.pdf"
+                      class="link">
+                      <div class="card__header">
+                        <h2 class="card__heading"><span>CV</span></h2>
+                        <div class="card__icon">
+                          <i class="fa-solid fa-circle-down"></i>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </li>
+
+                <li class="list__item">
+                  <div class="contact__card card">
+                    <a href="mailto:josh.schaerer@gmail.com" class="link">
+                      <div class="card__header">
+                        <h2 class="card__heading"><span>Email</span></h2>
+                        <div class="card__icon">
+                          <i class="fa-regular fa-envelope"></i>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </li>
+
+                <li class="list__item">
+                  <div class="contact__card card">
+                    <a
+                      target="_blank"
+                      href="https://wa.me/41797828338"
+                      class="link">
+                      <div class="card__header">
+                        <h2 class="card__heading"><span>Phone</span></h2>
+                        <div class="card__icon">
+                          <i class="fa-solid fa-phone"></i>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <form
+              action="mailto:josh.schaerer@gmail.com"
+              class="contact__form form"
+              method="post"
+              enctype="text/plain">
+              <fieldset class="contact__form-div">
+                <legend class="contact__form-legend">Contact</legend>
+
+                <div class="contact__form-group">
+                  <label for="contact-name" class="contact__form-textfield">
+                    <input
+                      type="text"
+                      id="contact-name"
+                      name="contact-name"
+                      class="contact__form-input"
+                      placeholder=" "
+                      pattern="[A-Za-z ]+"
+                      required />
+                    <span class="contact__form-label"><span>Name</span></span>
+                  </label>
+                  <span class="contact__form-error-message">
+                    The name must contain only letters.
+                  </span>
+                </div>
+
+                <div class="contact__form-group">
+                  <label for="contact-email" class="contact__form-textfield">
+                    <input
+                      type="email"
+                      id="contact-email"
+                      name="contact-email"
+                      class="contact__form-input"
+                      placeholder=" "
+                      required />
+                    <span class="contact__form-label"><span>Email</span></span>
+                  </label>
+                  <span class="contact__form-error-message">
+                    The email is not formatted correctly.
+                  </span>
+                </div>
+
+                <div class="contact__form-group">
+                  <label for="contact-message" class="contact__form-textarea">
+                    <textarea
+                      type="text"
+                      id="contact-message"
+                      name="contact-message"
+                      cols="30"
+                      rows="10"
+                      class="contact__form-input"
+                      placeholder=" "
+                      required></textarea>
+                    <span class="contact__form-label">
+                      <span>Message</span>
+                    </span>
+                  </label>
+                </div>
+
+                <button type="submit">Send</button>
+              </fieldset>
+            </form>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!--==================== FOOTER ====================-->
+    <footer class="footer" id="footer">
+      <nav class="footer__nav container" id="footer-nav" aria-label="footer">
+        <div class="footer__menu-logo">
+          <ul class="footer__list list list--vertical">
+            <li class="list__item">
+              <a href="../index.html" class="footer__logo link">js</a>
+            </li>
+            <li class="list__item">
+              <p class="footer__paragraph">
+                Computer science graduate and software developer creating
+                innovative solutions that exceed expectations.
+              </p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer__menu-design">
+          <ul class="footer__list list list--vertical">
+            <li class="list__heading">Design</li>
+            <li class="list__item">
+              <a href="./design.html#web-design" class="footer__link link">
+                Web Design
+              </a>
+            </li>
+            <li class="list__item">
+              <a href="./design.html#ui-ux-design" class="footer__link link">
+                UI/UX Design
+              </a>
+            </li>
+            <li class="list__item">
+              <a href="./design.html#mobile-design" class="footer__link link">
+                Mobile Design
+              </a>
+            </li>
+            <li class="list__item">
+              <a href="./design.html#branding" class="footer__link link">
+                Branding
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer__menu-dev">
+          <ul class="footer__list list list--vertical">
+            <li class="list__heading">Development</li>
+            <li class="list__item">
+              <a
+                href="./development.html#web-development"
+                class="footer__link link">
+                Web
+              </a>
+            </li>
+            <li class="list__item">
+              <a
+                href="./development.html#software-development"
+                class="footer__link link">
+                Software
+              </a>
+            </li>
+            <li class="list__item">
+              <a
+                href="./development.html#frontend-development"
+                class="footer__link link">
+                Frontend
+              </a>
+            </li>
+            <li class="list__item">
+              <a
+                href="./development.html#backend-development"
+                class="footer__link link">
+                Backend
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer__menu-about">
+          <ul class="footer__list list list--vertical">
+            <li class="list__heading">About</li>
+            <li class="list__item">
+              <a href="./about.html" class="footer__link link">About me</a>
+            </li>
+            <li class="list__item">
+              <a href="./portfolio.html" class="footer__link link">Portfolio</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer__menu-socials">
+          <ul class="footer__list list list--vertical">
+            <li class="list__heading">Socials</li>
+            <li class="list__item">
+              <a
+                target="_blank"
+                href="https://www.linkedin.com/in/joshuaschaerer/"
+                class="footer__link link link--icon">
+                <i class="fa-brands fa-linkedin-in"></i>
+                LinkedIn
+              </a>
+            </li>
+            <li class="list__item">
+              <a
+                target="_blank"
+                href="https://github.com/joshschaerer"
+                class="footer__link link link--icon">
+                <i class="fa-brands fa-github-alt"></i>
+                GitHub
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer__menu-contact">
+          <ul class="footer__list list list--vertical">
+            <li class="list__heading">Contact me</li>
+            <li class="list__item">
+              <a
+                href="mailto:josh.schaerer@gmail.com"
+                class="footer__link link link--icon">
+                <i class="fa-regular fa-envelope"></i>
+                Email
+              </a>
+            </li>
+            <li class="list__item">
+              <a
+                target="_blank"
+                href="../assets/pdf/Job-Application_compressed.pdf"
+                class="footer__link link link--icon">
+                <i class="fa-regular fa-address-card"></i>
+                CV
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="footer__bottom container">
+        <div class="footer__menu-credits">
+          <ul class="footer__list list">
+            <li class="list__item">
+              <a href="./imprint.html" class="footer__link link link--button">
+                Imprint
+              </a>
+            </li>
+            <li class="list__item">
+              <a href="./privacy.html" class="footer__link link link--button">
+                Privacy
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <span class="footer__copy">
+          &#169; 2023 Joshua Schärer. All rigths reserved.
+        </span>
+      </div>
+    </footer>
+  </body>
+</html>

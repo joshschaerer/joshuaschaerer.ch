@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="435" height="368" color="#FFFFFF60"
+    viewbox="0 0 435 368">
+    <g transform="translate(2 2)" fill="none" fill-rule="evenodd">
+        <path
+            d="M0 8a8 8 0 0 1 8-8h415a8 8 0 0 1 8 8v53H0V8ZM0 61h431v295a8 8 0 0 1-8 8H8a8 8 0 0 1-8-8V61Z"
+            stroke="currentColor" stroke-width="4" />
+        <ellipse cx="36.5" cy="31" rx="9.5" ry="9" fill="currentColor" fill-rule="nonzero" />
+        <ellipse cx="69.5" cy="31" rx="9.5" ry="9" fill="currentColor" fill-rule="nonzero" />
+        <ellipse cx="103.5" cy="31" rx="9.5" ry="9" fill="currentColor" fill-rule="nonzero" />
+        <path
+            d="M160.332 214.724c-14.281 4.466-25.145 15.327-29.608 29.608-.696 2.224-3.752 2.224-4.448 0-4.463-14.281-15.327-25.142-29.608-29.608-2.224-.696-2.224-3.752 0-4.448 14.281-4.463 25.145-15.323 29.608-29.608.696-2.224 3.752-2.224 4.448 0 4.463 14.285 15.327 25.145 29.608 29.608 2.224.696 2.224 3.752 0 4.448Z"
+            fill="#8876FE" />
+        <rect stroke="currentColor" stroke-width="4" x="39" y="109" width="180"
+            height="206" rx="13" />
+        <rect stroke="currentColor" stroke-width="4" x="263" y="148" width="129"
+            height="20" rx="10" />
+        <rect stroke="currentColor" stroke-width="4" x="263" y="202" width="129"
+            height="20" rx="10" />
+        <rect stroke="currentColor" stroke-width="4" x="263" y="256" width="129"
+            height="20" rx="10" />
+    </g>
+</svg>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="435" height="368" color="#FFFFFF60"
+    viewbox="0 0 435 368">
+    <g transform="translate(2 2)" fill="none" fill-rule="evenodd">
+        <path
+            d="M0 8a8 8 0 0 1 8-8h415a8 8 0 0 1 8 8v53H0V8ZM0 61h431v295a8 8 0 0 1-8 8H8a8 8 0 0 1-8-8V61Z"
+            stroke="currentColor" stroke-width="4" />
+        <path
+            d="M117.303 138.93c-5.968 1.866-10.509 6.405-12.373 12.373a.969.969 0 0 1-1.86 0c-1.864-5.968-6.405-10.507-12.373-12.373a.969.969 0 0 1 0-1.86c5.968-1.864 10.509-6.403 12.373-12.373a.969.969 0 0 1 1.86 0c1.864 5.97 6.405 10.509 12.373 12.373a.969.969 0 0 1 0 1.86Z"
+            fill="#8876FE" />
+        <ellipse cx="36.5" cy="31" rx="9.5" ry="9" fill="currentColor" fill-rule="nonzero" />
+        <ellipse cx="69.5" cy="31" rx="9.5" ry="9" fill="currentColor" fill-rule="nonzero" />
+        <ellipse cx="103.5" cy="31" rx="9.5" ry="9" fill="currentColor" fill-rule="nonzero" />
+        <circle stroke="currentColor" stroke-width="4" cx="151" cy="248" r="75" />
+        <path stroke="currentColor" stroke-width="4" d="M176 114h143v142H176z" />
+        <path
+            d="M176 107h1a7 7 0 0 1 0 14h-1a7 7 0 0 1 0-14Zm.5 141a7.5 7.5 0 1 1 0 15 7.5 7.5 0 0 1 0-15ZM318 107h1a7 7 0 0 1 0 14h-1a7 7 0 0 1 0-14Zm.5 141a7.5 7.5 0 1 1 0 15 7.5 7.5 0 0 1 0-15Z"
+            fill="currentColor" fill-rule="nonzero" />
+    </g>
+</svg>

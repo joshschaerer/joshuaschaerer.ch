@@ -150,7 +150,11 @@
               </ul>
             </div>
 
-            <form action="#" class="contact__form form">
+            <form
+              action="mailto:josh.schaerer@gmail.com"
+              class="contact__form form"
+              method="post"
+              enctype="text/plain">
               <fieldset class="contact__form-div">
                 <legend class="contact__form-legend">Contact</legend>
 
@@ -159,6 +163,7 @@
                     <input
                       type="text"
                       id="contact-name"
+                      name="contact-name"
                       class="contact__form-input"
                       placeholder=" "
                       pattern="[A-Za-z ]+"
@@ -175,6 +180,7 @@
                     <input
                       type="email"
                       id="contact-email"
+                      name="contact-email"
                       class="contact__form-input"
                       placeholder=" "
                       required />
@@ -188,8 +194,9 @@
                 <div class="contact__form-group">
                   <label for="contact-message" class="contact__form-textarea">
                     <textarea
-                      name="contact-message"
+                      type="text"
                       id="contact-message"
+                      name="contact-message"
                       cols="30"
                       rows="10"
                       class="contact__form-input"

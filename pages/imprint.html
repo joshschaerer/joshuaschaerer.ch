@@ -51,13 +51,12 @@
 
     <!--=============== CSS ===============-->
     <link rel="stylesheet" href="../assets/css/styles.css" />
-    <link rel="stylesheet" href="../assets/css/portfolio.css" />
 
     <!--=============== JS ===============-->
     <script src="../assets/js/main.js" defer></script>
 
     <!--=============== METADATA ===============-->
-    <title>Portfolio</title>
+    <title>Imprint</title>
     <meta name="keywords" content="" />
     <meta name="description" content="" />
     <meta name="author" content="Joshua Schärer" />
@@ -73,7 +72,7 @@
         <div class="nav__menu">
           <ul class="nav__list list">
             <li class="list__item">
-              <a href="#" class="nav__link link link--button link--active">
+              <a href="./portfolio.html" class="nav__link link link--button">
                 Portfolio
               </a>
             </li>
@@ -94,162 +93,36 @@
 
     <!--==================== MAIN ====================-->
     <main class="main" id="main">
-      <div class="container container--big">
+      <div class="container">
         <!--=============== INTRO ===============-->
-        <section class="intro section container" id="intro">
-          <h1 class="intro__heading">My portfolio</h1>
+        <section class="intro section" id="intro">
+          <h1 class="intro__heading">Imprint</h1>
         </section>
 
-        <!--=============== PROJECTS ===============-->
-        <section class="projects section container" id="projects">
-          <div class="section__header">
-            <span class="section__subheading">
-              <span data-animation="scroll">Explore my work</span>
-            </span>
-            <h2 class="section__heading">
-              <span data-animation="scroll">Powerful solutions</span>
-            </h2>
-            <p class="section__paragraph" data-animation="scroll">
-              Step into my world of imagination and innovation. Each project is
-              a testament to my dedication, craftsmanship, and unwavering
-              commitment to delivering exceptional results. Take a moment to
-              browse through the collection and get a glimpse into my creative
-              journey.
-            </p>
-          </div>
-
-          <div class="section__content" data-animation="scroll">
-            <div class="portfolio__menu">
-              <ul class="list list--card">
-                <li class="list__item" data-animation="scroll">
-                  <div class="portfolio__card card card--image">
-                    <picture class="card__image">
-                      <img
-                        src="../assets/img/scheduling-problems.jpg"
-                        alt="thesis" />
-                    </picture>
-
-                    <div class="card__header">
-                      <div class="card__keywords">
-                        <ul class="list">
-                          <li class="list__item">C#</li>
-                          <li class="list__item">.NET6</li>
-                          <li class="list__item">Gurobi</li>
-                        </ul>
-                      </div>
-                      <h3 class="card__heading">Scheduling problems</h3>
-                      <p class="card__paragraph">
-                        Bachelor thesis - Research and development of a
-                        universal model for scheduling problems.
-                      </p>
-                      <div class="card__links">
-                        <ul class="list">
-                          <li class="list__item">
-                            <a
-                              href="../assets/pdf/Bachelor-Thesis_Universal-Modeling-and-Optimization-of-Scheduling-Problems.pdf"
-                              class="link link--icon"
-                              target="_blank">
-                              <i class="fa-regular fa-file-lines"></i>
-                              Thesis
-                            </a>
-                          </li>
-                          <li class="list__item">
-                            <a
-                              href="https://github.com/joshschaerer/universal-model-for-scheduling-problems"
-                              class="link link--icon"
-                              target="_blank">
-                              <i class="fa-solid fa-code"></i>
-                              Code
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
+        <!--=============== IMPRINT ===============-->
+        <section class="imprint section" id="imprint">
+          <div class="section__content">
+            <div class="imprint__menu">
+              <ul class="list list--vertical">
+                <li class="list__item imprint-info__menu">
+                  <ul class="list list--vertical">
+                    <li class="list__heading">
+                      <h2>Information according to &sect; 5 TMG</h2>
+                    </li>
+                    <li class="list__item">Joshua Schärer</li>
+                    <li class="list__item">Rebweg 2</li>
+                    <li class="list__item">5103 Möriken</li>
+                  </ul>
                 </li>
 
-                <li class="list__item" data-animation="scroll">
-                  <div class="portfolio__card card card--image">
-                    <picture class="card__image">
-                      <img
-                        src="../assets/img/internet-usage.jpeg"
-                        alt="internet-usage" />
-                    </picture>
-
-                    <div class="card__header">
-                      <div class="card__keywords">
-                        <ul class="list">
-                          <li class="list__item">HTML5</li>
-                          <li class="list__item">CSS3</li>
-                          <li class="list__item">JS</li>
-                          <li class="list__item">D3.js</li>
-                        </ul>
-                      </div>
-                      <h3 class="card__heading">Covid-19 research</h3>
-                      <p class="card__paragraph">
-                        Website unveiling comprehensive insights into Swiss
-                        internet usage during the pandemic.
-                      </p>
-                      <div class="card__links">
-                        <ul class="list">
-                          <li class="list__item">
-                            <a
-                              href="https://github.com/joshschaerer/swiss-internet-usage"
-                              class="link link--icon"
-                              target="_blank">
-                              <i class="fa-solid fa-code"></i>
-                              Code
-                            </a>
-                          </li>
-                          <li class="list__item">
-                            <a
-                              href="https://joshschaerer.github.io/swiss-internet-usage/"
-                              class="link link--icon"
-                              target="_blank">
-                              <i class="fa-solid fa-link"></i>
-                              Website
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-
-                <li class="list__item" data-animation="scroll">
-                  <div class="portfolio__card card card--image">
-                    <picture class="card__image">
-                      <img src="../assets/img/lead-tool.jpg" alt="lead-tool" />
-                    </picture>
-
-                    <div class="card__header">
-                      <div class="card__keywords">
-                        <ul class="list">
-                          <li class="list__item">HTML5</li>
-                          <li class="list__item">CSS3</li>
-                          <li class="list__item">JS</li>
-                          <li class="list__item">React</li>
-                          <li class="list__item">Java</li>
-                          <li class="list__item">Spring Boot</li>
-                        </ul>
-                      </div>
-                      <h3 class="card__heading">Lead management</h3>
-                      <p class="card__paragraph">
-                        Web-based lead management application tailored for
-                        Allianz Suisse.
-                      </p>
-                      <div class="card__links">
-                        <ul class="list">
-                          <li class="list__item">
-                            <a href="#" class="link link--icon">
-                              <i class="fa-regular fa-circle-xmark"></i>
-                              No links available
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
+                <li class="list__item imprint-contact__menu">
+                  <ul class="list list--vertical">
+                    <li class="list__heading">
+                      <h2>Contact</h2>
+                    </li>
+                    <li class="list__item">Phone: +41 79 782 83 38</li>
+                    <li class="list__item">Email: josh.schaerer@gmail.com</li>
+                  </ul>
                 </li>
               </ul>
             </div>
@@ -342,7 +215,7 @@
               <a href="./about.html" class="footer__link link">About me</a>
             </li>
             <li class="list__item">
-              <a href="#" class="footer__link link">Portfolio</a>
+              <a href="./portfolio.html" class="footer__link link">Portfolio</a>
             </li>
           </ul>
         </div>
@@ -399,9 +272,7 @@
         <div class="footer__menu-credits">
           <ul class="footer__list list">
             <li class="list__item">
-              <a href="./imprint.html" class="footer__link link link--button">
-                Imprint
-              </a>
+              <a href="#" class="footer__link link link--button">Imprint</a>
             </li>
             <li class="list__item">
               <a href="./privacy.html" class="footer__link link link--button">

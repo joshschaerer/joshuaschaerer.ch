@@ -2,55 +2,55 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     <url>
-        <loc>https://www.joshuaschaerer.ch/</loc>
+        <loc>https://joshuaschaerer.ch/</loc>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
 
     <url>
-        <loc>https://www.joshuaschaerer.ch/pages/design.html</loc>
+        <loc>https://joshuaschaerer.ch/pages/design.html</loc>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://www.joshuaschaerer.ch/pages/development.html</loc>
+        <loc>https://joshuaschaerer.ch/pages/development.html</loc>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://www.joshuaschaerer.ch/pages/portfolio.html</loc>
+        <loc>https://joshuaschaerer.ch/pages/portfolio.html</loc>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://www.joshuaschaerer.ch/pages/about.html</loc>
+        <loc>https://joshuaschaerer.ch/pages/about.html</loc>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://www.joshuaschaerer.ch/pages/contact.html</loc>
+        <loc>https://joshuaschaerer.ch/pages/contact.html</loc>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://www.joshuaschaerer.ch/index.html</loc>
+        <loc>https://joshuaschaerer.ch/index.html</loc>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
     </url>
 
     <url>
-        <loc>https://www.joshuaschaerer.ch/pages/privacy.html</loc>
+        <loc>https://joshuaschaerer.ch/pages/privacy.html</loc>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
 
     <url>
-        <loc>https://www.joshuaschaerer.ch/pages/imprint.html</loc>
+        <loc>https://joshuaschaerer.ch/pages/imprint.html</loc>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>

@@ -334,6 +334,7 @@ img {
 }
 
 .card__image img {
+  aspect-ratio: 3/2;
   border-radius: var(--border-radius);
   display: block;
   object-fit: cover;
